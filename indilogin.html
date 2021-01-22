@@ -64,9 +64,11 @@
 	        <input type='email' name="email" id="email" placeholder='Email' class='input-line full-width'></input>
 	        <input type='password' name="pass" id="pass" placeholder='Password' class='input-line full-width'></input>
 	      	</div>
-	  	  </form>
+	  	  
 	      <div class='spacing'>or create new account <span class='highlight'><a href="indisignup.html">Signup</a></span></div>
-	      <div><input type="submit"  name="Login" value="Login" class='ghost-round full-width'></div>
+	      <div><input type="submit"  name="Login" value="Login" class='ghost-round full-width'>
+	      </div>
+	      </form>
 	    </div>
 	  </div>
 	</div>
@@ -154,7 +156,6 @@ function check()
     alert("Plese Enter Login Id");
 	document.form1.lid.focus();
 	return false;
-
   }
  
  if(document.form1.pass.value=="")
