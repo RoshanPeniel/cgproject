@@ -15,15 +15,30 @@ $email = $_POST['email'];
 $pass = $_POST['pass'];
 $uname = $_POST['uname'];
 
+$sqlsel = "Select * from indiuser where email='$email' or uname='$uname' "; 
+    
+    $result = mysqli_query($conn, $sqlsel); 
+    
+    $num = mysqli_num_rows($result);  
+    
 
-$sql = "INSERT INTO indiuser (uname ,email, password)
-VALUES ('$uname', '$email', '$pass')";
+    if($num == 0) 
+    { 
+        
+		$sql = "INSERT INTO indiuser (uname ,email, password)
+		VALUES ('$uname', '$email', '$pass')";
 
-if ($conn->query($sql) === TRUE) {
-  echo "New record created successfully";
-} else {
-  echo "Error: " . $sql . "<br>" . $conn->error;
-}
+		if ($conn->query($sql) === TRUE) {
+			  echo "<script>
+			alert('Signup Successful. Login to continue');
+			window.location.href='indilogin.html';
+			</script>";
+		} 
+		else 
+		{
+		  echo "Error: " . $sql . "<br>" . $conn->error;
+		}
+	}
 
 $conn->close();
 ?>

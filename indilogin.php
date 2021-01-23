@@ -37,7 +37,7 @@ window.location.href='indilogin.html';
    { 
       	echo "<script>
 alert('Login Successful.');
-window.location.href='index.html';
+window.location.href='indiinfo.html';
 </script>";
    }  
 
