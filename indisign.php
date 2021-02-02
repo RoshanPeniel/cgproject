@@ -39,6 +39,13 @@ $sqlsel = "Select * from indiuser where email='$email' or uname='$uname' ";
 		  echo "Error: " . $sql . "<br>" . $conn->error;
 		}
 	}
+	if($num>0)  
+   { 
+      	echo "<script>
+		alert('email');
+		window.location.href='indiinfo.html';
+		</script>";
+   }  
 
 $conn->close();
 ?>

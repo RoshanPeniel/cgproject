@@ -39,7 +39,7 @@
 					<a class="nav-link  " href="index.html">Home</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link active" href="indilogin.html">Individual</a>
+					<a class="nav-link " href="indilogin.html">Individual</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link " href="teamlogin.html">Team</a>
@@ -60,14 +60,20 @@
 	  <div class='window'>
 	    <div class='overlay'></div>
 	    <div class='content'>
-	      <div class='welcome'>Verify email!</div>
-	      <div class='subtitle'>We're almost done. Before using our services you need to verify your email address.</div>
+	      <div class='welcome'>Hello There!</div>
+	      <div class='subtitle'>We're almost done. Before using our services you need to login or create an account.</div>
+	      <form name="form1" method="post" action="indisign.php" onSubmit="return check();">
 	      <div class='input-fields'>
-	        <input type='input' placeholder='Enter OTP' class='input-line full-width'></input>
+	      	<input type='input' name="uname" id="uname" placeholder='Username' class='input-line full-width'></input>
+	        <input type='email' name="email" id="email" placeholder='Email' class='input-line full-width'></input>
+	        <input type='password' name="pass" id="pass" placeholder='Password' class='input-line full-width'></input>
+	    
 
 	      </div>
-	      <div class='spacing'>or create new account <span class='highlight'><a href="indisignup.html">Signup</a></span></div>
-	      <div><button class='ghost-round full-width'>Verify</button></div>
+	      <div class='spacing'>Already have an account? <span class='highlight'><a href="indilogin.html">Login</a></span></div>
+	      
+	      <input type="submit"  name="Signup" value="Signup" class='ghost-round full-width'>
+	  </form>
 	    </div>
 	  </div>
 	</div>
@@ -146,3 +152,78 @@ function hideloader()
 		});
 	});
 </script>
+
+<script language="javascript">
+function check()
+{
+
+ if(document.form1.lid.value=="")
+  {
+    alert("Plese Enter Login Id");
+	document.form1.lid.focus();
+	return false;
+  }
+ 
+ if(document.form1.pass.value=="")
+  {
+    alert("Plese Enter Your Password");
+	document.form1.pass.focus();
+	return false;
+  } 
+  if(document.form1.cpass.value=="")
+  {
+    alert("Plese Enter Confirm Password");
+	document.form1.cpass.focus();
+	return false;
+  }
+  if(document.form1.pass.value!=document.form1.cpass.value)
+  {
+    alert("Confirm Password does not matched");
+	document.form1.cpass.focus();
+	return false;
+  }
+  if(document.form1.name.value=="")
+  {
+    alert("Plese Enter Your Name");
+	document.form1.name.focus();
+	return false;
+  }
+  if(document.form1.address.value=="")
+  {
+    alert("Plese Enter Address");
+	document.form1.address.focus();
+	return false;
+  }
+  if(document.form1.city.value=="")
+  {
+    alert("Plese Enter City Name");
+	document.form1.city.focus();
+	return false;
+  }
+  if(document.form1.phone.value=="")
+  {
+    alert("Plese Enter Contact No");
+	document.form1.phone.focus();
+	return false;
+  }
+  if(document.form1.email.value=="")
+  {
+    alert("Plese Enter your Email Address");
+	document.form1.email.focus();
+	return false;
+  }
+  e=document.form1.email.value;
+		f1=e.indexOf('@');
+		f2=e.indexOf('@',f1+1);
+		e1=e.indexOf('.');
+		e2=e.indexOf('.',e1+1);
+		n=e.length;
+
+		if(!(f1>0 && f2==-1 && e1>0 && e2==-1 && f1!=e1+1 && e1!=f1+1 && f1!=n-1 && e1!=n-1))
+		{
+			alert("Please Enter valid Email");
+			document.form1.email.focus();
+			return false;
+		}
+  return true;
+  }
