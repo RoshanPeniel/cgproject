@@ -18,7 +18,7 @@ $uname = $_POST['uname'];
 if($email != NULL &&  $pass != NULL && $uname != NULL)
 {
 
-$sqlsel = "Select * from indiuser where email='$email' or uname='$uname' "; 
+$sqlsel = "Select * from bookuser where email='$email' or uname='$uname' "; 
     
     $result = mysqli_query($conn, $sqlsel); 
      
@@ -28,13 +28,13 @@ $sqlsel = "Select * from indiuser where email='$email' or uname='$uname' ";
     if($num == 0) 
     { 
         
-		$sql = "INSERT INTO indiuser (uname ,email, password)
+		$sql = "INSERT INTO bookuser (uname ,email, password)
 		VALUES ('$uname', '$email', '$pass')";
 
 		if ($conn->query($sql) === TRUE) {
 			  echo "<script>
 			alert('Signup Successful. Login to continue');
-			window.location.href='indilogin.html';
+			window.location.href='bookinglogin.html';
 			</script>";
 		} 
 		else 
@@ -46,7 +46,7 @@ $sqlsel = "Select * from indiuser where email='$email' or uname='$uname' ";
    { 
       	echo "<script>
 		alert('email already in use');
-		window.location.href='indilogin.html';
+		window.location.href='bookinglogin.html';
 		</script>";
    }  
 }
@@ -54,7 +54,7 @@ else
 {
 	echo "<script>
 		alert('Fill something');
-		window.location.href='indisignup.html';
+		window.location.href='bookingsignup.html';
 		</script>";
 }
 

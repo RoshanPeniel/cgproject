@@ -45,7 +45,7 @@
 					<a class="nav-link active" href="teamlogin.html">Team</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link active" href="bookinglogin.html">Booking</a>
+					<a class="nav-link" href="bookinglogin.html">Booking</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link " href="more.html">More</a>
@@ -62,13 +62,15 @@
 	    <div class='content'>
 	      <div class='welcome'>Hello There!</div>
 	      <div class='subtitle'>We're almost done. Before using our services you need to login or create an account.</div>
+	      <form name="form1" method="post" action="teamlogin.php" onSubmit="return check();">
 	      <div class='input-fields'>
-	        <input type='email' placeholder='Email' class='input-line full-width'></input>
-	        <input type='password' placeholder='Password' class='input-line full-width'></input>
-
+	        <input type='email' name="email" id="email" placeholder='Email' class='input-line full-width'></input>
+	        <input type='password' name="pass" id="pass" placeholder='Password' class='input-line full-width'></input>
 	      </div>
+
 	      <div class='spacing'>or create new account <span class='highlight'><a href="teamsignup.html">Signup</a></span></div>
-	      <div><button class='ghost-round full-width' onclick="teamotp.html" >Login</button></div>
+	      <div><input type="submit"  name="Login" value="Login" class='ghost-round full-width'></div>
+	  </form>
 	    </div>
 	  </div>
 	</div>

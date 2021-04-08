@@ -60,18 +60,45 @@
 	  <div class='window'>
 	    <div class='overlay'></div>
 	    <div class='content'>
-	      <div class='welcome'>Hello There!</div>
-	      <div class='subtitle'>We're almost done. Before using our services you need to login or create an account.</div>
-	       <form name="form1" method="post" action="teamsignup.php" onSubmit="return check();">
-	      <div class='input-fields'>
-	      	<input type='input' name="uname" id="uname" placeholder='Username' class='input-line full-width'></input>
-	        <input type='email' name="email" id="email" placeholder='Email' class='input-line full-width'></input>
-	        <input type='password' name="pass" id="pass" placeholder='Password' class='input-line full-width'></input>
+	      <div class='welcome'>Enter Info</div>
+	      <div class='subtitle'>We're almost done. Before using our services you need to give your player level to help give you a proper match.</div>
+	      <form name="form1" method="post" action="teaminfo.php" onSubmit="return check();">
+	      	<div class='input-fields'>
+
+	      	<select id="sport" name="sport" class='input-line full-width'>
+			    <option value="" selected>Select the sport</option>
+			    <option value="Football">Football</option>
+			    <option value="Cricket" >Cricket</option>
+			    <option value="Badminton">Badminton</option>
+		  	</select>
+	        
+	        <select id="age" name="age" class='input-line full-width'>
+			    <option value="" selected>Select age group</option>
+			    <option value="10-15">10-15</option>
+			    <option value="16-20" >16-20</option>
+			    <option value="21-30">21-30</option>
+		  	</select>
+
+		  	<select id="level" name="level" class='input-line full-width'>
+			    <option value="" selected>Select level of playing</option>
+			    <option value="beginner">beginner</option>
+			    <option value="intermediate" >intermediate</option>
+			    <option value="professional">professional</option>
+		  	</select>
+
+		  	<select id="turf" name="turf" class='input-line full-width'>
+			    <option value="" selected>Select turf</option>
+			    <option value="turf-1">turf-1</option>
+			    <option value="turf-2" >turf-2</option>
+			    <option value="turf-3">turf-3</option>
+		  	</select>
+	        
+	      	</div>
+	  	  
+	      <br><br>
+	      <div><input type="submit"  name="enter" value="enter" class='ghost-round full-width'>
 	      </div>
-	      <div class='spacing'>Already have an account? <span class='highlight'><a href="teamlogin.html">Login</a></span></div>
-	    
-	      <input type="submit"  name="Signup" value="Signup" class='ghost-round full-width'>
-	    </form>
+	      </form>
 	    </div>
 	  </div>
 	</div>

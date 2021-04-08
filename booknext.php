@@ -15,6 +15,16 @@
 	<link rel="stylesheet" type="text/css" href="css/all.min.css">
 	<link rel="stylesheet" type="text/css" href="css/animate.css">
 	<link rel="stylesheet" type="text/css" href="css/waypoints.css">
+	<style type="text/css">
+		table,th,td,tr
+		{
+			padding: 0.5rem;
+			color: black;
+			border-style: solid;
+		}
+		
+	
+	</style>>
 
 </head>
 <body  onload="hideloader()" >
@@ -42,10 +52,10 @@
 					<a class="nav-link " href="indilogin.html">Individual</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link active" href="teamlogin.html">Team</a>
+					<a class="nav-link " href="teamlogin.html">Team</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link " href="bookinglogin.html">Booking</a>
+					<a class="nav-link active" href="bookinglogin.html">Booking</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link " href="more.html">More</a>
@@ -53,30 +63,13 @@
 			</ul>
 		</div>
 	</nav>
+<br><br><br>
 
 
-<div class='bold-line'></div>
-	<div class='container'>
-	  <div class='window'>
-	    <div class='overlay'></div>
-	    <div class='content'>
-	      <div class='welcome'>Hello There!</div>
-	      <div class='subtitle'>We're almost done. Before using our services you need to login or create an account.</div>
-	       <form name="form1" method="post" action="teamsignup.php" onSubmit="return check();">
-	      <div class='input-fields'>
-	      	<input type='input' name="uname" id="uname" placeholder='Username' class='input-line full-width'></input>
-	        <input type='email' name="email" id="email" placeholder='Email' class='input-line full-width'></input>
-	        <input type='password' name="pass" id="pass" placeholder='Password' class='input-line full-width'></input>
-	      </div>
-	      <div class='spacing'>Already have an account? <span class='highlight'><a href="teamlogin.html">Login</a></span></div>
-	    
-	      <input type="submit"  name="Signup" value="Signup" class='ghost-round full-width'>
-	    </form>
-	    </div>
-	  </div>
-	</div>
-		
 
+
+
+<br><br><br>
 
 
 <div id="contact" class="offset">
@@ -96,7 +89,7 @@
 			   		<a href="" target="_blank"><i class="fab fa-instagram"></i></a>	   		
 				</div>
 				<hr class="socket">
-				&copy: Rp.
+				&copy: tony.
 			</div>
 		</footer>
 	</div>

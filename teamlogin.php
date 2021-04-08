@@ -15,7 +15,7 @@ if ($conn->connect_error) {
 $email = $_POST['email'];
 $pass = $_POST['pass'];
 
-$sql = "Select * from indiuser where email='$email' and password='$pass' "; 
+$sql = "Select * from teamuser where email='$email' and password='$pass' "; 
     
     $result = mysqli_query($conn, $sql); 
     
@@ -29,7 +29,7 @@ $sql = "Select * from indiuser where email='$email' and password='$pass' ";
         
         echo "<script>
 alert('Incorrect username or password. Click ok to try again');
-window.location.href='indilogin.html';
+window.location.href='teamlogin.html';
 </script>";
         
     }
@@ -40,7 +40,7 @@ window.location.href='indilogin.html';
 
       	echo "<script>
 alert('Login Successful.');
-window.location.href='indiinfo.html';
+window.location.href='teaminfo.html';
 </script>";
    }  
 
